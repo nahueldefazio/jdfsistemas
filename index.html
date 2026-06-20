@@ -1,0 +1,655 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JDF Sistemas - Soluciones Integrales en Sistemas Informáticos, Comunicaciones y Energía</title>
+
+    <!-- SEO -->
+    <meta name="description" content="JDF Sistemas - Soluciones Integrales en Sistemas Informáticos, Comunicaciones y Energía. Diseño de Software, Diseño Web, Telefonía IP, Cámaras de Seguridad, Electrotécnica Industrial, Servicio Técnico, Mantenimientos mensuales.">
+    <meta name="keywords" content="Diseño de Software, Diseño web, Comunicaciones, Telefonía IP, Cámaras de Seguridad, Electrotécnica Industrial, Servicio Técnico, Mantenimientos mensuales, JDF Sistemas">
+    <meta name="author" content="JDF Sistemas Soluciones Integrales">
+    <meta name="language" content="es-AR">
+    <meta name="robots" content="index, follow">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="JDF Sistemas - Soluciones Integrales">
+    <meta property="og:description" content="Soluciones Integrales en Sistemas Informáticos, Comunicaciones y Energía. Diseño de Software, Diseño Web, Telefonía IP, Cámaras de Seguridad, Servicio Técnico.">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="es_AR">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+    <!-- ====================================================
+         NAVEGACIÓN
+    ===================================================== -->
+    <nav id="navbar" class="navbar">
+        <div class="nav-container">
+            <a href="#inicio" class="nav-logo">
+                <span class="logo-jdf">JDF</span>
+                <span class="logo-sistemas">Sistemas</span>
+            </a>
+            <button class="hamburger" id="hamburger" aria-label="Abrir menú" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="#servidores" class="nav-link">Servidores</a></li>
+                <li><a href="#telefonia" class="nav-link">Telefonía</a></li>
+                <li><a href="#software" class="nav-link">Software</a></li>
+                <li><a href="#web" class="nav-link">Diseño Web</a></li>
+                <li><a href="#servicio" class="nav-link">Serv. Técnico</a></li>
+                <li><a href="#seguridad" class="nav-link">Seguridad</a></li>
+                <li><a href="#energia" class="nav-link">Energía</a></li>
+                <li><a href="#contacto" class="nav-link nav-cta">Contacto</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- ====================================================
+         HERO / INICIO
+    ===================================================== -->
+    <section id="inicio" class="hero">
+        <div class="hero-bg-pattern"></div>
+        <div class="hero-content">
+            <div class="hero-badge">Soluciones Integrales desde 2001</div>
+            <h1 class="hero-title">
+                <span class="title-red">JDF</span> Sistemas
+            </h1>
+            <p class="hero-subtitle">
+                Soluciones Integrales en Sistemas Informáticos,<br>
+                Comunicaciones y Energía
+            </p>
+
+            <!-- Barra de contacto -->
+            <div class="hero-contact">
+                <a href="https://wa.me/541144361290" class="contact-pill whatsapp" target="_blank" rel="noopener">
+                    <i class="fab fa-whatsapp"></i>
+                    <span>11 4436-1290</span>
+                </a>
+                <a href="tel:+541144361290" class="contact-pill phone">
+                    <i class="fas fa-phone"></i>
+                    <span>15 11 4436-1290</span>
+                </a>
+                <button class="contact-pill email" onclick="copyEmail()" type="button">
+                    <i class="fas fa-envelope"></i>
+                    <span>Email de contacto</span>
+                </button>
+                <a href="https://www.instagram.com/jdfsistemas1" class="contact-pill insta" target="_blank" rel="noopener">
+                    <i class="fab fa-instagram"></i>
+                    <span>jdfsistemas1</span>
+                </a>
+                <a href="https://www.facebook.com/jdfsistemas1" class="contact-pill face" target="_blank" rel="noopener">
+                    <i class="fab fa-facebook-f"></i>
+                    <span>jdfsistemas1</span>
+                </a>
+            </div>
+        </div>
+
+        <!-- Grilla de servicios -->
+        <div class="services-grid container">
+            <a href="#servidores" class="service-card">
+                <div class="service-icon blue"><i class="fas fa-server"></i></div>
+                <h3>Sala de Servidores</h3>
+                <p>Administración y monitoreo de infraestructura física y virtual</p>
+            </a>
+            <a href="#telefonia" class="service-card">
+                <div class="service-icon purple"><i class="fas fa-phone-alt"></i></div>
+                <h3>Telefonía</h3>
+                <p>IP, Analógica y Redes de Comunicaciones Clase 5, 6 y 7</p>
+            </a>
+            <a href="#software" class="service-card">
+                <div class="service-icon green"><i class="fas fa-code"></i></div>
+                <h3>Diseño de Software</h3>
+                <p>Desarrollo de software a medida para tu empresa o industria</p>
+            </a>
+            <a href="#web" class="service-card">
+                <div class="service-icon violet"><i class="fas fa-globe"></i></div>
+                <h3>Diseño Web</h3>
+                <p>Sitios web profesionales con tecnologías modernas y carritos de compra</p>
+            </a>
+            <a href="#servicio" class="service-card">
+                <div class="service-icon teal"><i class="fas fa-tools"></i></div>
+                <h3>Servicio Técnico</h3>
+                <p>Soporte presencial y remoto para toda tu infraestructura</p>
+            </a>
+            <a href="#seguridad" class="service-card">
+                <div class="service-icon red"><i class="fas fa-shield-alt"></i></div>
+                <h3>Seguridad</h3>
+                <p>Cámaras, DVR, control de accesos empresarial y domiciliario</p>
+            </a>
+            <a href="#energia" class="service-card">
+                <div class="service-icon gold"><i class="fas fa-bolt"></i></div>
+                <h3>Energía</h3>
+                <p>UPS, fuentes, tableros eléctricos e instalaciones industriales</p>
+            </a>
+        </div>
+    </section>
+
+    <!-- ====================================================
+         SALA DE SERVIDORES
+    ===================================================== -->
+    <section id="servidores" class="section bg-servidores">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-icon-wrap blue"><i class="fas fa-server"></i></div>
+                <h2 class="section-title blue-text">Sala de Servidores</h2>
+                <p class="section-sub">Administración profesional de su infraestructura tecnológica</p>
+            </div>
+
+            <div class="cards-grid three">
+                <div class="info-card reveal">
+                    <div class="card-top-icon blue"><i class="fas fa-shield-virus"></i></div>
+                    <h3>Administración de Servidores</h3>
+                    <p>Administramos servidores físicos y virtuales. Generamos reportes y alertas para evitar ataques, pérdida de información y asegurar los resguardos.</p>
+                </div>
+                <div class="info-card reveal">
+                    <div class="card-top-icon blue"><i class="fas fa-database"></i></div>
+                    <h3>Protección de Bases de Datos</h3>
+                    <p>Protegemos tus bases de datos como el activo más valioso y a la vez más vulnerable. Generamos réplicas y configuraciones en alta disponibilidad.</p>
+                </div>
+                <div class="info-card reveal">
+                    <div class="card-top-icon blue"><i class="fas fa-network-wired"></i></div>
+                    <h3>Monitoreo de Redes</h3>
+                    <p>Monitoreamos el tráfico, la calidad de tus redes y la velocidad de respuesta, con el fin de detectar anomalías que afecten la operación.</p>
+                </div>
+            </div>
+
+            <div class="modes-section">
+                <h3 class="modes-title">Modalidades del Servicio</h3>
+                <div class="modes-grid">
+                    <div class="mode-card mode-blue reveal">
+                        <div class="mode-icon-wrap blue"><i class="fas fa-wifi"></i></div>
+                        <div>
+                            <h4>Remoto</h4>
+                            <p>Vía Internet, recibís todo nuestro servicio especializado sin necesidad de presencia física.</p>
+                        </div>
+                    </div>
+                    <div class="mode-card mode-green reveal">
+                        <div class="mode-icon-wrap green"><i class="fas fa-building"></i></div>
+                        <div>
+                            <h4>In Situ</h4>
+                            <p>Visitamos tu Oficina y te brindamos el mejor servicio Presencial con atención personalizada.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ====================================================
+         TELEFONÍA
+    ===================================================== -->
+    <section id="telefonia" class="section bg-telefonia">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-icon-wrap purple"><i class="fas fa-phone-alt"></i></div>
+                <h2 class="section-title purple-text">Telefonía</h2>
+                <p class="section-sub">Telefonía IP · Telefonía Analógica · Redes Clase 5, 6 y 7</p>
+            </div>
+
+            <div class="two-col">
+                <div class="col-content">
+                    <div class="feature-list">
+                        <div class="feature-item reveal">
+                            <div class="feat-icon purple"><i class="fas fa-check"></i></div>
+                            <div>
+                                <h4>Telefonía IP</h4>
+                                <p>Implementación de sistemas VoIP modernos para empresas de cualquier tamaño, con funcionalidades avanzadas y bajo costo.</p>
+                            </div>
+                        </div>
+                        <div class="feature-item reveal">
+                            <div class="feat-icon purple"><i class="fas fa-check"></i></div>
+                            <div>
+                                <h4>Telefonía Analógica</h4>
+                                <p>Mantenimiento y configuración de sistemas telefónicos analógicos tradicionales con soporte completo.</p>
+                            </div>
+                        </div>
+                        <div class="feature-item reveal">
+                            <div class="feat-icon purple"><i class="fas fa-check"></i></div>
+                            <div>
+                                <h4>Redes Clase 5, 6 y 7</h4>
+                                <p>Diseño e implementación de redes de comunicaciones de alta capacidad para infraestructuras exigentes.</p>
+                            </div>
+                        </div>
+                        <div class="feature-item reveal">
+                            <div class="feat-icon purple"><i class="fas fa-check"></i></div>
+                            <div>
+                                <h4>Centrales PBX</h4>
+                                <p>Configuración y puesta en marcha de centrales telefónicas privadas para entornos corporativos.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-media reveal">
+                    <div class="yt-facade" data-id="xb3-UGY1kpo">
+                        <img src="https://i.ytimg.com/vi/xb3-UGY1kpo/hqdefault.jpg" alt="La telefonía actual. Introducción a la PBX." loading="lazy">
+                        <div class="yt-play"><i class="fab fa-youtube"></i></div>
+                        <span class="yt-label">Ver en YouTube</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ====================================================
+         DISEÑO DE SOFTWARE
+    ===================================================== -->
+    <section id="software" class="section bg-software">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-icon-wrap green"><i class="fas fa-code"></i></div>
+                <h2 class="section-title green-text">Diseño de Software</h2>
+                <p class="section-sub">Desarrollamos software a medida para cada necesidad empresarial e industrial</p>
+            </div>
+
+            <div class="two-col">
+                <div class="col-content">
+                    <h3 class="col-label">Desarrollamos Software de:</h3>
+                    <div class="tags-wrap">
+                        <span class="tag green reveal"><i class="fas fa-calculator"></i> Contabilidad</span>
+                        <span class="tag green reveal"><i class="fas fa-boxes"></i> Stock</span>
+                        <span class="tag green reveal"><i class="fas fa-shopping-cart"></i> Ventas</span>
+                        <span class="tag green reveal"><i class="fas fa-chart-bar"></i> Estadísticas</span>
+                        <span class="tag green reveal"><i class="fas fa-lock"></i> Seguridad</span>
+                        <span class="tag green reveal"><i class="fas fa-industry"></i> Desarrollos Industriales</span>
+                        <span class="tag green reveal"><i class="fas fa-clock"></i> Controladores de Tiempo</span>
+                        <span class="tag green reveal"><i class="fas fa-thermometer-half"></i> Controladores de Temperatura</span>
+                        <span class="tag green reveal"><i class="fas fa-home"></i> Domótica</span>
+                        <span class="tag green reveal"><i class="fas fa-truck"></i> Logística</span>
+                        <span class="tag green reveal"><i class="fas fa-hospital"></i> Turnos e Historias Clínicas</span>
+                        <span class="tag green reveal"><i class="fas fa-tachometer-alt"></i> Control de Velocidad</span>
+                        <span class="tag green reveal"><i class="fas fa-user-clock"></i> Control de Asistencia</span>
+                    </div>
+                </div>
+                <div class="col-media reveal">
+                    <div class="yt-facade" data-id="KysawushRV8">
+                        <img src="https://i.ytimg.com/vi/KysawushRV8/hqdefault.jpg" alt="¿Qué es el Software? Introducción" loading="lazy">
+                        <div class="yt-play"><i class="fab fa-youtube"></i></div>
+                        <span class="yt-label">Ver en YouTube</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ====================================================
+         DISEÑO WEB
+    ===================================================== -->
+    <section id="web" class="section bg-web">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-icon-wrap violet"><i class="fas fa-globe"></i></div>
+                <h2 class="section-title violet-text">Diseño Web</h2>
+                <p class="section-sub">Desarrollos Web Profesionales con las tecnologías más modernas del mercado</p>
+            </div>
+
+            <div class="two-col reverse">
+                <div class="col-media reveal">
+                    <div class="yt-facade" data-id="WqWv_mpuvaI">
+                        <img src="https://i.ytimg.com/vi/WqWv_mpuvaI/hqdefault.jpg" alt="Diseño Web profesional explicado en 3 minutos" loading="lazy">
+                        <div class="yt-play"><i class="fab fa-youtube"></i></div>
+                        <span class="yt-label">Ver en YouTube</span>
+                    </div>
+                </div>
+                <div class="col-content">
+                    <h3 class="col-label">Tecnologías que utilizamos:</h3>
+                    <div class="tech-stack">
+                        <div class="tech-item reveal">
+                            <i class="fab fa-html5"></i>
+                            <span>HTML5 / CSS3</span>
+                        </div>
+                        <div class="tech-item reveal">
+                            <i class="fab fa-js-square"></i>
+                            <span>JavaScript</span>
+                        </div>
+                        <div class="tech-item reveal">
+                            <i class="fab fa-angular"></i>
+                            <span>Angular</span>
+                        </div>
+                        <div class="tech-item reveal">
+                            <i class="fab fa-react"></i>
+                            <span>React</span>
+                        </div>
+                        <div class="tech-item reveal">
+                            <i class="fas fa-gem"></i>
+                            <span>Ruby</span>
+                        </div>
+                    </div>
+                    <div class="highlight-box reveal">
+                        <i class="fas fa-shopping-cart"></i>
+                        <div>
+                            <h4>¡Consultá por nuestros Carritos de Compras!</h4>
+                            <p>Diseño de páginas web con carrito de compra, alojamiento incluido y servidores de Bases de Datos que el usuario puede adaptar según sus necesidades.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ====================================================
+         SEGURIDAD
+    ===================================================== -->
+    <section id="seguridad" class="section bg-seguridad">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-icon-wrap red"><i class="fas fa-shield-alt"></i></div>
+                <h2 class="section-title red-text">Seguridad</h2>
+                <p class="section-sub">JDF Sistemas y JL-Tecnical unidos en Seguridad Empresarial y Domiciliaria</p>
+            </div>
+
+            <div class="two-col">
+                <div class="col-content">
+                    <div class="partner-badge reveal">
+                        <i class="fas fa-handshake"></i>
+                        <span>En alianza con <strong>JL-Tecnical</strong></span>
+                    </div>
+                    <div class="feature-list">
+                        <div class="feature-item reveal">
+                            <div class="feat-icon red"><i class="fas fa-video"></i></div>
+                            <div>
+                                <h4>Cámaras de Seguridad</h4>
+                                <p>Instalación y configuración de cámaras IP y analógicas para hogares y empresas con soporte técnico especializado.</p>
+                            </div>
+                        </div>
+                        <div class="feature-item reveal">
+                            <div class="feat-icon red"><i class="fas fa-hdd"></i></div>
+                            <div>
+                                <h4>DVR y Software de Seguridad</h4>
+                                <p>Montaje, programación y puesta en marcha de DVR y software de seguridad para vigilancia permanente.</p>
+                            </div>
+                        </div>
+                        <div class="feature-item reveal">
+                            <div class="feat-icon red"><i class="fas fa-door-closed"></i></div>
+                            <div>
+                                <h4>Control de Accesos</h4>
+                                <p>Sistemas de control de acceso biométricos y electrónicos para uso empresarial y domiciliario.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="https://www.jl-tecnical.com.ar/" class="btn-partner reveal" target="_blank" rel="noopener">
+                        <i class="fas fa-external-link-alt"></i>
+                        Visitar JL-TECNICAL
+                    </a>
+                </div>
+                <div class="col-media reveal">
+                    <div class="yt-facade" data-id="i3NKEN33sW4">
+                        <img src="https://i.ytimg.com/vi/i3NKEN33sW4/hqdefault.jpg" alt="Cámaras de Seguridad: esto debes saber antes de elegir una" loading="lazy">
+                        <div class="yt-play"><i class="fab fa-youtube"></i></div>
+                        <span class="yt-label">Ver en YouTube</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ====================================================
+         ENERGÍA
+    ===================================================== -->
+    <section id="energia" class="section bg-energia">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-icon-wrap gold"><i class="fas fa-bolt"></i></div>
+                <h2 class="section-title gold-text">Energía</h2>
+                <p class="section-sub">JDF Sistemas — Soluciones Integrales en Energía para PC, Oficinas e Instalaciones Industriales</p>
+            </div>
+
+            <!-- Sub-sección UPS y Fuentes -->
+            <div class="subsection">
+                <h3 class="subsection-title">
+                    <i class="fas fa-battery-full"></i>
+                    UPS y Fuentes Switching
+                </h3>
+                <div class="cards-grid two">
+                    <div class="info-card gold-card reveal">
+                        <div class="card-top-icon gold"><i class="fas fa-plug"></i></div>
+                        <h3>UPS Para PC</h3>
+                        <ul class="bullet-list">
+                            <li>Dispositivo para suplantar la electricidad ante pérdida de red de 220V</li>
+                            <li>Autonomía de aproximadamente <strong>20 minutos</strong></li>
+                            <li>Protege discos, procesadores, memorias, fuentes y placas madre</li>
+                            <li>Calculamos la UPS óptima para su PC al menor costo y mayor rendimiento</li>
+                            <li>No dude en consultarnos — su pregunta nos gratifica</li>
+                        </ul>
+                    </div>
+                    <div class="info-card gold-card reveal">
+                        <div class="card-top-icon gold"><i class="fas fa-microchip"></i></div>
+                        <h3>Fuentes Para PC</h3>
+                        <ul class="bullet-list">
+                            <li>Determinamos la mejor fuente para su PC y sistema de oficina</li>
+                            <li>La fuente óptima reduce el consumo energético = menor gasto operativo</li>
+                            <li>Mayor costo-beneficio con equipos correctamente dimensionados</li>
+                            <li>Reparación y mantenimiento de todos sus equipos</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sub-sección Sala de Sistemas -->
+            <div class="subsection">
+                <h3 class="subsection-title">
+                    <i class="fas fa-industry"></i>
+                    Sala de Sistemas — UPS Industrial y Tableros Eléctricos
+                </h3>
+                <div class="cards-grid three">
+                    <div class="info-card reveal">
+                        <div class="card-top-icon gold"><i class="fas fa-server"></i></div>
+                        <h3>UPS Industrial</h3>
+                        <p>Las UPS en la Sala de Servidores son indispensables para mantener el sistema encendido aún cuando se corte el suministro eléctrico. Calculamos y desarrollamos el apoyo de energía a escala.</p>
+                    </div>
+                    <div class="info-card reveal">
+                        <div class="card-top-icon gold"><i class="fas fa-sitemap"></i></div>
+                        <h3>Tableros Eléctricos</h3>
+                        <p>Realizamos los cálculos e instalación de todos los tableros eléctricos, de control y funcionamiento para sala de servidores y sistemas informáticos, bajo <strong>Normas ISO Internacionales</strong>.</p>
+                    </div>
+                    <div class="info-card reveal">
+                        <div class="card-top-icon gold"><i class="fas fa-laptop-code"></i></div>
+                        <h3>Software de Control</h3>
+                        <p>JDF Sistemas provee todos los programas necesarios para el control y verificación de la alimentación eléctrica en salas de servidores. No dude en consultarnos — nuestra experiencia está a su disposición.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ====================================================
+         SERVICIO TÉCNICO
+    ===================================================== -->
+    <section id="servicio" class="section bg-servicio">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-icon-wrap teal"><i class="fas fa-tools"></i></div>
+                <h2 class="section-title teal-text">Servicio Técnico</h2>
+                <p class="section-sub">Brindamos dos tipos de Servicio Técnico a nuestros Clientes</p>
+            </div>
+
+            <div class="two-col">
+                <div class="col-content">
+                    <div class="service-type-cards">
+                        <div class="stype-card green-border reveal">
+                            <div class="stype-header">
+                                <div class="stype-icon green"><i class="fas fa-building"></i></div>
+                                <h3>In Situ</h3>
+                            </div>
+                            <p>Nos hacemos presente en tu empresa para brindarte en forma presencial la mejor y rápida solución a todos tus problemas de:</p>
+                            <ul class="stype-list">
+                                <li><i class="fas fa-desktop"></i> Sistemas Informáticos</li>
+                                <li><i class="fas fa-network-wired"></i> Comunicaciones</li>
+                                <li><i class="fas fa-bolt"></i> Energía</li>
+                            </ul>
+                        </div>
+                        <div class="stype-card blue-border reveal">
+                            <div class="stype-header">
+                                <div class="stype-icon blue"><i class="fas fa-wifi"></i></div>
+                                <h3>Vía Remota</h3>
+                            </div>
+                            <p>A través de la Red por Internet, verificamos, solucionamos y reprogramamos todos los:</p>
+                            <ul class="stype-list">
+                                <li><i class="fas fa-desktop"></i> Sistemas Informáticos</li>
+                                <li><i class="fas fa-network-wired"></i> Sistemas de Comunicaciones</li>
+                                <li><i class="fas fa-bolt"></i> Soporte de Energía</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-media reveal">
+                    <div class="yt-facade" data-id="mHwEbuURgfE">
+                        <img src="https://i.ytimg.com/vi/mHwEbuURgfE/hqdefault.jpg" alt="Funciones de un Técnico en Sistemas" loading="lazy">
+                        <div class="yt-play"><i class="fab fa-youtube"></i></div>
+                        <span class="yt-label">Ver en YouTube</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ====================================================
+         CONTACTO
+    ===================================================== -->
+    <section id="contacto" class="section bg-contacto">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-icon-wrap gold"><i class="fas fa-envelope"></i></div>
+                <h2 class="section-title gold-text">Contacto</h2>
+                <p class="section-sub">Estamos para ayudarte. Consultá sin compromiso.</p>
+            </div>
+
+            <div class="contact-layout">
+                <!-- Info -->
+                <div class="contact-info">
+                    <h3>Información de Contacto</h3>
+                    <div class="contact-list">
+                        <a href="https://wa.me/541144361290" class="contact-row" target="_blank" rel="noopener">
+                            <div class="cr-icon whatsapp-bg"><i class="fab fa-whatsapp"></i></div>
+                            <div>
+                                <span>WhatsApp</span>
+                                <strong>11 4436-1290</strong>
+                            </div>
+                        </a>
+                        <a href="tel:+541144361290" class="contact-row">
+                            <div class="cr-icon phone-bg"><i class="fas fa-phone"></i></div>
+                            <div>
+                                <span>Teléfono</span>
+                                <strong>15 11 4436-1290</strong>
+                            </div>
+                        </a>
+                        <button class="contact-row email-row" onclick="copyEmail()" type="button">
+                            <div class="cr-icon email-bg"><i class="fas fa-envelope"></i></div>
+                            <div>
+                                <span>Email (click para copiar)</span>
+                                <strong>info@jdfsistemas.com.ar</strong>
+                            </div>
+                        </button>
+                        <a href="https://www.instagram.com/jdfsistemas1" class="contact-row" target="_blank" rel="noopener">
+                            <div class="cr-icon insta-bg"><i class="fab fa-instagram"></i></div>
+                            <div>
+                                <span>Instagram</span>
+                                <strong>@jdfsistemas1</strong>
+                            </div>
+                        </a>
+                        <a href="https://www.facebook.com/jdfsistemas1" class="contact-row" target="_blank" rel="noopener">
+                            <div class="cr-icon face-bg"><i class="fab fa-facebook-f"></i></div>
+                            <div>
+                                <span>Facebook</span>
+                                <strong>jdfsistemas1</strong>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Formulario -->
+                <div class="contact-form-wrap">
+                    <h3>Envianos un Mensaje</h3>
+                    <form id="contactForm" class="contact-form" novalidate>
+                        <div class="form-group">
+                            <label for="nombre">Nombre completo *</label>
+                            <input type="text" id="nombre" name="nombre" placeholder="Tu nombre completo" autocomplete="name" required>
+                            <span class="form-err" id="errNombre">Por favor ingresá tu nombre (mínimo 2 caracteres).</span>
+                        </div>
+                        <div class="form-group">
+                            <label for="cemail">Email *</label>
+                            <input type="email" id="cemail" name="email" placeholder="tu@email.com" autocomplete="email" required>
+                            <span class="form-err" id="errEmail">Por favor ingresá un email válido.</span>
+                        </div>
+                        <div class="form-group">
+                            <label for="mensaje">Mensaje *</label>
+                            <textarea id="mensaje" name="mensaje" rows="5" placeholder="¿En qué podemos ayudarte?" required></textarea>
+                            <span class="form-err" id="errMensaje">El mensaje debe tener al menos 10 caracteres.</span>
+                        </div>
+                        <button type="submit" class="btn-submit" id="submitBtn">
+                            <i class="fas fa-paper-plane"></i>
+                            Enviar Mensaje
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ====================================================
+         FOOTER
+    ===================================================== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="footer-logo">
+                        <span class="logo-jdf">JDF</span>
+                        <span class="logo-sistemas">Sistemas</span>
+                    </div>
+                    <p>Soluciones Integrales en Sistemas Informáticos, Comunicaciones y Energía</p>
+                    <div class="footer-social">
+                        <a href="https://wa.me/541144361290" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                        <a href="https://www.instagram.com/jdfsistemas1" target="_blank" rel="noopener" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.facebook.com/jdfsistemas1" target="_blank" rel="noopener" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="mailto:info@jdfsistemas.com.ar" aria-label="Email"><i class="fas fa-envelope"></i></a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h4>Servicios</h4>
+                    <ul>
+                        <li><a href="#servidores">Sala de Servidores</a></li>
+                        <li><a href="#telefonia">Telefonía</a></li>
+                        <li><a href="#software">Diseño de Software</a></li>
+                        <li><a href="#web">Diseño Web</a></li>
+                        <li><a href="#servicio">Servicio Técnico</a></li>
+                        <li><a href="#seguridad">Seguridad</a></li>
+                        <li><a href="#energia">Energía</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>Contacto</h4>
+                    <p><i class="fab fa-whatsapp"></i> 11 4436-1290</p>
+                    <p><i class="fas fa-phone"></i> 15 11 4436-1290</p>
+                    <p><i class="fas fa-envelope"></i> info@jdfsistemas.com.ar</p>
+                    <p><i class="fab fa-instagram"></i> jdfsistemas1</p>
+                    <p><i class="fab fa-facebook-f"></i> jdfsistemas1</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 JDF Sistemas — Soluciones Integrales. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp flotante -->
+    <a href="https://wa.me/541144361290" class="whatsapp-float" target="_blank" rel="noopener" aria-label="Contactar por WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Toast de notificación -->
+    <div id="toast" class="toast" role="alert" aria-live="polite">
+        <i class="fas fa-check-circle"></i>
+        <span id="toastMsg">Email copiado al portapapeles</span>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
