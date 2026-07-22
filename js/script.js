@@ -161,8 +161,11 @@ form.addEventListener('submit', (e) => {
         headers: { 'Accept': 'application/json' },
         body: new FormData(form)
     })
-        .then(res => {
-            if (!res.ok) throw new Error('send-failed');
+        .then(res => res.json().then(data => {
+            if (!res.ok || data.success === 'false' || data.success === false) {
+                throw new Error(data.message || 'send-failed');
+            }
+
             submitBtn.innerHTML = '<i class="fas fa-check"></i> ¡Mensaje enviado!';
             submitBtn.classList.add('success');
             showToast('¡Mensaje enviado correctamente!');
@@ -173,10 +176,11 @@ form.addEventListener('submit', (e) => {
                 submitBtn.disabled = false;
                 form.reset();
             }, 3200);
-        })
-        .catch(() => {
+        }))
+        .catch((err) => {
             submitBtn.innerHTML = origHTML;
             submitBtn.disabled = false;
+            console.error('Error al enviar el formulario:', err.message);
             showToast('No se pudo enviar el mensaje. Probá de nuevo o escribinos por WhatsApp.');
         });
 });
