@@ -152,20 +152,33 @@ form.addEventListener('submit', (e) => {
 
     if (!ok) return;
 
-    // Éxito visual
     const origHTML = submitBtn.innerHTML;
-    submitBtn.innerHTML = '<i class="fas fa-check"></i> ¡Mensaje enviado!';
-    submitBtn.classList.add('success');
+    submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Enviando...';
     submitBtn.disabled = true;
 
-    showToast('¡Mensaje enviado correctamente!');
+    fetch('https://formsubmit.co/ajax/info@jdfsistemas.com.ar', {
+        method: 'POST',
+        headers: { 'Accept': 'application/json' },
+        body: new FormData(form)
+    })
+        .then(res => {
+            if (!res.ok) throw new Error('send-failed');
+            submitBtn.innerHTML = '<i class="fas fa-check"></i> ¡Mensaje enviado!';
+            submitBtn.classList.add('success');
+            showToast('¡Mensaje enviado correctamente!');
 
-    setTimeout(() => {
-        submitBtn.innerHTML = origHTML;
-        submitBtn.classList.remove('success');
-        submitBtn.disabled = false;
-        form.reset();
-    }, 3200);
+            setTimeout(() => {
+                submitBtn.innerHTML = origHTML;
+                submitBtn.classList.remove('success');
+                submitBtn.disabled = false;
+                form.reset();
+            }, 3200);
+        })
+        .catch(() => {
+            submitBtn.innerHTML = origHTML;
+            submitBtn.disabled = false;
+            showToast('No se pudo enviar el mensaje. Probá de nuevo o escribinos por WhatsApp.');
+        });
 });
 
 // Limpiar error al escribir
