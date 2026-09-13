@@ -1,11 +1,11 @@
 # Genera favicon.ico multi-resolucion (16/32/48/64) con el estilo de marca de JDF Sistemas
-# (fondo oscuro + "JDF" en rojo, itálica, como el logo del sitio).
+# (fondo charcoal + "J" en bronce serif, direccion Consultora Premium).
 # Cada tamaño se guarda como PNG embebido dentro del .ico (soportado por todos los navegadores modernos).
 
 Add-Type -AssemblyName System.Drawing
 
-$darkColor = [System.Drawing.Color]::FromArgb(8, 13, 26)     # --dark
-$redColor  = [System.Drawing.Color]::FromArgb(198, 0, 0)      # --red
+$darkColor = [System.Drawing.Color]::FromArgb(28, 26, 23)     # --dark
+$redColor  = [System.Drawing.Color]::FromArgb(169, 119, 47)   # --gold (acento bronce)
 
 function New-FaviconPng {
     param([int]$size)
@@ -29,10 +29,10 @@ function New-FaviconPng {
     $brush = New-Object System.Drawing.SolidBrush $darkColor
     $g.FillPath($brush, $path)
 
-    # Texto "J" en rojo, itálica, centrado (legible incluso en 16px)
+    # Texto "J" en bronce, serif itálica, centrado (legible incluso en 16px)
     $fontSize = [float]($size * 0.68)
-    $fontStyle = [System.Drawing.FontStyle]::Bold -bor [System.Drawing.FontStyle]::Italic
-    $font = New-Object System.Drawing.Font("Arial", $fontSize, $fontStyle, [System.Drawing.GraphicsUnit]::Pixel)
+    $fontStyle = [System.Drawing.FontStyle]::Italic
+    $font = New-Object System.Drawing.Font("Georgia", $fontSize, $fontStyle, [System.Drawing.GraphicsUnit]::Pixel)
     $textBrush = New-Object System.Drawing.SolidBrush $redColor
     $sf = New-Object System.Drawing.StringFormat
     $sf.Alignment = [System.Drawing.StringAlignment]::Center
